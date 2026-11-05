@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>معًا ضد التنمر | ابتدائية ومتوسطة وثانوية المخشلية</title>
+<style>
+:root{--bg:#faf6ff;--card:#fff;--tx:#2b2140;--mu:#6b5f84;--p:#7c3aed;--o:#f97316;--pk:#ec4899;--y:#fef3c7;--bd:#e9ddff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17111f;--card:#241a33;--tx:#f3ecff;--mu:#b9acd3;--y:#3a2f14;--bd:#3d2e57}}
+:root[data-theme="dark"]{--bg:#17111f;--card:#241a33;--tx:#f3ecff;--mu:#b9acd3;--y:#3a2f14;--bd:#3d2e57}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Tahoma,"Segoe UI",Arial,sans-serif;line-height:1.8}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border-bottom:2px solid var(--bd);padding:8px 14px;display:flex;align-items:center;gap:10px;overflow-x:auto}
+header b{white-space:nowrap;color:var(--p)}header a{white-space:nowrap;color:var(--tx);text-decoration:none;font-size:14px;padding:4px 10px;border-radius:20px}
+header a:hover{background:var(--bd)}
+.hero{text-align:center;padding:40px 16px;background:linear-gradient(135deg,#7c3aed,#ec4899 60%,#f97316);color:#fff}
+.hero h1{font-size:clamp(34px,8vw,60px);margin:8px 0}.hero .em{font-size:64px}
+.school{display:inline-block;background:rgba(255,255,255,.2);padding:6px 18px;border-radius:30px;font-weight:bold}
+.staff{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px auto 0;max-width:700px}
+.staff div{background:rgba(255,255,255,.95);color:#2b2140;border-radius:16px;padding:8px 16px;font-size:15px}
+.staff small{display:block;color:#7c3aed;font-weight:bold}
+.btn{display:inline-block;border:0;cursor:pointer;background:var(--o);color:#fff;padding:10px 22px;border-radius:30px;font:inherit;font-weight:bold;text-decoration:none;margin:6px}
+.btn.alt{background:#fff;color:var(--p)}
+section{max-width:960px;margin:0 auto;padding:36px 16px}
+h2{color:var(--p);font-size:28px;margin:0 0 4px}h2 span{background:var(--o);color:#fff;border-radius:50%;padding:0 12px;margin-left:8px;font-size:22px}
+.sub{color:var(--mu);margin:0 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.card{background:var(--card);border:2px solid var(--bd);border-radius:20px;padding:16px;text-align:center}
+.card .ic{font-size:44px}.card h3{margin:4px 0;color:var(--p)}
+.def{background:var(--y);border-radius:20px;padding:18px;margin-bottom:16px}
+.flip{cursor:pointer;font:inherit;color:var(--tx)}.flip .more{display:none;margin-top:8px;font-size:14px;background:var(--y);border-radius:12px;padding:8px}
+.flip.open .more{display:block}
+.step{display:flex;gap:12px;align-items:center;text-align:right;cursor:pointer;width:100%;font:inherit;color:var(--tx);margin-bottom:10px}
+.step .n{background:var(--p);color:#fff;border-radius:50%;width:34px;height:34px;display:grid;place-items:center;flex:none}
+.step.done{border-color:#22c55e;background:rgba(34,197,94,.12)}.step.done .n{background:#22c55e}
+.step h3{margin:0}.step p{margin:0;color:var(--mu);font-size:14px}
+.heart{cursor:pointer;font:inherit;color:var(--tx)}
+.opt{display:block;width:100%;text-align:right;background:var(--card);border:2px solid var(--bd);border-radius:14px;padding:10px 14px;margin:8px 0;font:inherit;color:var(--tx);cursor:pointer}
+.opt.ok{border-color:#22c55e;background:rgba(34,197,94,.18)}.opt.no{border-color:#ef4444;background:rgba(239,68,68,.15)}
+.bar{height:10px;background:var(--bd);border-radius:10px;overflow:hidden;margin-bottom:12px}.bar i{display:block;height:100%;width:0;background:var(--o);transition:.3s}
+input[type=text],textarea,select{width:100%;font:inherit;padding:10px;border-radius:12px;border:2px solid var(--bd);background:var(--bg);color:var(--tx);margin:4px 0 12px}
+label{font-weight:bold}.chk{font-weight:normal;display:flex;gap:8px;align-items:center}.chk input{width:auto;margin:0}
+.pledge{font-size:20px;border-right:6px solid var(--pk);background:var(--y);padding:16px;border-radius:12px}
+.msg{font-size:24px;min-height:110px;display:grid;place-items:center}
+.ok-msg{background:rgba(34,197,94,.15);border:2px solid #22c55e;border-radius:14px;padding:12px;margin-top:12px;display:none}
+footer{background:#2b2140;color:#fff;text-align:center;padding:28px 16px}footer p{margin:2px 0}
+</style>
+</head>
+<body>
+<header id="top"><b>🏫 المخشلية</b>
+<a href="#what">ما هو التنمر؟</a><a href="#forms">أشكال التنمر</a><a href="#act">كيف أتصرف؟</a><a href="#friend">كن صديقًا</a><a href="#quiz">اختبر معلوماتك</a><a href="#pledge">التعهد</a><a href="#report">صندوق الإبلاغ</a><a href="#messages">رسائل توعوية</a></header>
+
+<div class="hero">
+<div class="em">🏫</div>
+<div class="school">ابتدائية ومتوسطة وثانوية المخشلية تقدّم</div>
+<h1>معًا ضد التنمر</h1>
+<p>مرحبًا يا أبطال! هنا نتعلّم معًا ما هو التنمر، وكيف نتصرف بشجاعة، وكيف نكون أصدقاء طيبين يحترمون الجميع. 💜</p>
+<a class="btn" href="#what">ابدأ الرحلة 🚀</a><a class="btn alt" href="#quiz">اختبر معلوماتك 🧠</a>
+<div class="staff">
+<div><small>المديرة</small>فاطمة شراحيلي</div>
+<div><small>موجهات الطالبات</small>جباره معيدي - ساره الزهراني</div>
+</div>
+</div>
+
+<section id="what"><h2><span>١</span>ما هو التنمر؟</h2><p class="sub">تعال نتعرّف عليه بطريقة سهلة</p>
+<div class="def">🤔 <b>التنمر</b> هو أن يؤذي شخصٌ شخصًا آخر <b>عمدًا</b> و<b>بشكل متكرر</b>، بالكلام أو بالفعل أو بالإبعاد أو عبر الإنترنت، فيجعله يشعر بالحزن أو الخوف.<br>💡 تذكّر: المزاح الذي يُحزن زميلتك ليس مزاحًا!</div>
+<div class="grid">
+<div class="card"><div class="ic">🗣️</div><h3>التنمر اللفظي</h3>استخدام كلمات جارحة تؤذي مشاعر الآخرين.</div>
+<div class="card"><div class="ic">✋</div><h3>التنمر الجسدي</h3>إيذاء جسد الآخرين أو ممتلكاتهم.</div>
+<div class="card"><div class="ic">🚫</div><h3>التنمر الاجتماعي</h3>إبعاد زميلة عن المجموعة أو نشر الإشاعات عنها.</div>
+<div class="card"><div class="ic">📱</div><h3>التنمر الإلكتروني</h3>الإساءة للآخرين عبر الإنترنت والأجهزة الذكية.</div>
+</div></section>
+
+<section id="forms"><h2><span>٢</span>أشكال التنمر</h2><p class="sub">اضغطي على أي بطاقة لتعرفي أمثلة ونصيحة مفيدة</p>
+<div class="grid">
+<button class="card flip"><div class="ic">🗣️</div><h3>التنمر اللفظي</h3>اعرفي أكثر ←<div class="more">أمثلة: السخرية، الألقاب المؤذية، الشتائم.<br>نصيحة: استبدلي الكلمة الجارحة بكلمة طيبة.</div></button>
+<button class="card flip"><div class="ic">✋</div><h3>التنمر الجسدي</h3>اعرفي أكثر ←<div class="more">أمثلة: الضرب، الدفع، أخذ الأغراض أو إتلافها.<br>نصيحة: ابتعدي فورًا وأخبري معلمة.</div></button>
+<button class="card flip"><div class="ic">🚫</div><h3>التنمر الاجتماعي</h3>اعرفي أكثر ←<div class="more">أمثلة: العزل، نشر الإشاعات، رفض اللعب معها.<br>نصيحة: اجلسي مع من تجلس وحدها وشاركيها.</div></button>
+<button class="card flip"><div class="ic">📱</div><h3>التنمر الإلكتروني</h3>اعرفي أكثر ←<div class="more">أمثلة: رسائل مسيئة، نشر صورة دون إذن.<br>نصيحة: لا ترسلي ولا تعيدي النشر، وأخبري شخصًا بالغًا.</div></button>
+</div></section>
+
+<section id="act"><h2><span>٣</span>كيف أتصرف إذا تعرضت للتنمر؟</h2><p class="sub">أربع خطوات بطولية. اضغطي على كل خطوة عندما تحفظينها! ✅</p>
+<button class="card step"><span class="n">١</span><div><h3>🧘 لا ترد على الإساءة بالإساءة</h3><p>خذي نفسًا عميقًا وحافظي على هدوئك، فالرد بالإساءة يزيد المشكلة.</p></div></button>
+<button class="card step"><span class="n">٢</span><div><h3>🚶 ابتعدي عن المتنمرة</h3><p>اذهبي بثقة إلى مكان آمن قريب من صديقاتك أو معلماتك.</p></div></button>
+<button class="card step"><span class="n">٣</span><div><h3>🧑‍🏫 أخبري شخصًا بالغًا تثقين به</h3><p>تحدثي مع والديك أو معلمتك أو الموجهة الطلابية، فهن هنا لمساعدتك.</p></div></button>
+<button class="card step"><span class="n">٤</span><div><h3>📣 لا تسكتي عن التنمر</h3><p>السكوت يجعل المتنمرة تستمر. صوتك مهم، ويمكنك استخدام صندوق الإبلاغ.</p></div></button>
+<p id="stepc" style="font-weight:bold;color:var(--p)">حفظتُ ٠ من ٤ خطوات</p></section>
+
+<section id="friend"><h2><span>٤</span>كوني صديقة لا متنمرة</h2><p class="sub">اضغطي على القلب إذا أعجبتك العبارة 💖</p>
+<div class="grid">
+<button class="card heart"><div class="ic">🌸</div>«الكلمة الطيبة تصنع السعادة»<br>❤️ <b>٠</b></button>
+<button class="card heart"><div class="ic">🌈</div>«الاختلاف لا يعني الإساءة»<br>❤️ <b>٠</b></button>
+<button class="card heart"><div class="ic">😊</div>«كوني سببًا في ابتسامة زميلتك»<br>❤️ <b>٠</b></button>
+<button class="card heart"><div class="ic">🤝</div>«جميعنا نستحق الاحترام»<br>❤️ <b>٠</b></button>
+</div></section>
+
+<section id="quiz"><h2><span>٥</span>اختبري معلوماتك</h2><p class="sub">مسابقة من ١٠ أسئلة، اختاري الإجابة الصحيحة وستعرفين فورًا إن كانت صحيحة!</p>
+<div class="card" id="qbox" style="text-align:right"><div style="text-align:center"><div class="ic" style="font-size:44px">🧠</div><h3>هل أنتِ مستعدة يا بطلة؟</h3><button class="btn" id="qstart">ابدأ المسابقة ▶</button></div></div></section>
+
+<section id="pledge"><h2><span>٦</span>تعهد ضد التنمر</h2><p class="sub">اقرئي التعهد بصوت عالٍ، ثم اكتبي اسمك واضغطي زر «أتعهد»</p>
+<div class="pledge">✋ «أتعهد أن أحترم زميلاتي، وأحافظ على مشاعرهن، وأرفض التنمر بجميع أشكاله، وأكون صديقة للجميع.»</div><br>
+<label class="chk"><input type="checkbox" id="pc"> قرأتُ التعهد وفهمته</label><br>
+<label>اسمك (اختياري)</label><input type="text" id="pn">
+<button class="btn" id="pb" disabled style="opacity:.5">أتعهد 🤝</button>
+<div class="ok-msg" id="pok"></div></section>
+
+<section id="report"><h2><span>٧</span>صندوق الإبلاغ عن التنمر</h2><p class="sub">اكتبي ما تعرّضتِ له أو شاهدتِه، وسيصل بلاغك بسرية إلى إدارة المدرسة والموجهات فقط</p>
+<div class="def">🛡️ <b>بلاغك في أمان</b><br>• لا يرى البلاغ إلا الإدارة والموجهات الطلابيات.<br>• يمكنك الإبلاغ دون كتابة اسمك.<br>• 💛 الإبلاغ شجاعة، وليس «فتنة». أنتِ تساعدين زميلتك ومدرستك.<br>إذا كنتِ في خطر الآن، اذهبي فورًا إلى أقرب معلمة أو إلى مكتب الإدارة.</div>
+<div class="card" style="text-align:right">
+<label>١. ماذا حدث؟ *</label><select id="r1"><option value="">اختاري</option><option>🙋 تعرضتُ للتنمر</option><option>👀 شاهدتُ تنمرًا على زميلة</option></select>
+<label>٢. نوع التنمر</label><select><option>لفظي</option><option>جسدي</option><option>اجتماعي</option><option>إلكتروني</option><option>لا أعرف</option></select>
+<label>٣. أين حدث؟</label><select><option>الصف</option><option>الساحة</option><option>الممرات</option><option>الحافلة</option><option>دورات المياه</option><option>عبر الإنترنت</option><option>مكان آخر</option></select>
+<label>٤. متى حدث؟</label><input type="text" placeholder="مثال: اليوم في الفسحة">
+<label>٥. احكي لنا ما حدث *</label><textarea rows="4" id="r5"></textarea>
+<label class="chk"><input type="checkbox"> أريد الإبلاغ دون ذكر اسمي 🤫</label><br>
+<button class="btn" id="rb">أرسلي البلاغ بسرية 🔒</button>
+<div class="ok-msg" id="rok">💛 شكرًا لشجاعتك! تم استلام بلاغك وستتواصل معك الموجهة الطلابية قريبًا.</div></div></section>
+
+<section id="messages"><h2><span>٨</span>رسائل توعوية</h2><p class="sub">رسائل قصيرة تتجدد كل بضع ثوانٍ عن التسامح والاحترام والمحبة</p>
+<div class="card"><div class="msg" id="msg"></div><button class="btn" id="mb">رسالة جديدة</button></div></section>
+
+<footer><div style="font-size:40px">🏫</div><p><b>ابتدائية ومتوسطة وثانوية المخشلية</b></p><p>المديرة: فاطمة شراحيلي</p><p>موجهات الطالبات: جباره معيدي - ساره الزهراني</p><p>معًا ضد التنمر 💜🧡💗💛</p><p><a href="#top" style="color:#fbbf24">العودة إلى الأعلى ↑</a></p></footer>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const ar=n=>String(n).replace(/\d/g,d=>"٠١٢٣٤٥٦٧٨٩"[d]);
+$$('.flip').forEach(b=>b.onclick=()=>b.classList.toggle('open'));
+$$('.step').forEach(b=>b.onclick=()=>{b.classList.toggle('done');$('#stepc').textContent='حفظتُ '+ar($$('.step.done').length)+' من ٤ خطوات'+($$('.step.done').length==4?' 🎉 أحسنتِ!':'')});
+$$('.heart').forEach(b=>{let c=0;b.onclick=()=>{c++;b.querySelector('b').textContent=ar(c)}});
+const Q=[
+["التنمر هو إيذاء متكرر ومقصود لشخص آخر.",["صح","خطأ"],0],
+["المزاح الذي يُحزن زميلتك يُعدّ:",["مزاحًا عاديًا","تنمرًا"],1],
+["إذا تعرضتِ للتنمر فأفضل تصرف:",["الرد بالإساءة","إخبار شخص بالغ أثق به","السكوت"],1],
+["إبعاد زميلة عن المجموعة يسمى تنمرًا:",["اجتماعيًا","جسديًا","رياضيًا"],0],
+["الإساءة عبر الأجهزة الذكية تسمى تنمرًا:",["لفظيًا","إلكترونيًا","اجتماعيًا"],1],
+["إذا شاهدتِ تنمرًا على زميلة فعليكِ:",["الضحك","التصوير ونشره","مساعدتها والإبلاغ"],2],
+["الإبلاغ عن التنمر يُعدّ:",["شجاعة","فتنة","ضعفًا"],0],
+["عند مواجهة المتنمرة نحافظ على:",["الغضب","الهدوء","الصراخ"],1],
+["السكوت عن التنمر يجعل المتنمرة:",["تتوقف","تستمر","تعتذر"],1],
+["أفضل ما نقدمه لزميلاتنا:",["الاحترام والكلمة الطيبة","السخرية","العزل"],0]];
+let qi=0,qs=0;
+function showQ(){const b=$('#qbox');if(qi>=Q.length){b.innerHTML=`<div style="text-align:center"><div style="font-size:50px">${qs>=8?'🏆':'⭐'}</div><h3>نتيجتك: ${ar(qs)} من ${ar(Q.length)}</h3><p>${qs>=8?'ممتاز! أنتِ بطلة ضد التنمر 💜':'محاولة جميلة! أعيدي المسابقة لتتعلمي أكثر.'}</p><button class="btn" onclick="qi=0;qs=0;showQ()">أعيدي المسابقة 🔄</button></div>`;return}
+const [t,o,a]=Q[qi];b.innerHTML=`<div class="bar"><i style="width:${qi/Q.length*100}%"></i></div><b>السؤال ${ar(qi+1)} من ${ar(Q.length)}</b><h3>${t}</h3>`+o.map((x,i)=>`<button class="opt" data-i="${i}">${x}</button>`).join('');
+$$('.opt').forEach(x=>x.onclick=()=>{const i=+x.dataset.i;$$('.opt').forEach(y=>y.disabled=true);$$('.opt')[a].classList.add('ok');if(i==a)qs++;else x.classList.add('no');setTimeout(()=>{qi++;showQ()},1100)})}
+$('#qstart').onclick=showQ;
+const pc=$('#pc'),pb=$('#pb');pc.onchange=()=>{pb.disabled=!pc.checked;pb.style.opacity=pc.checked?1:.5};
+pb.onclick=()=>{const n=$('#pn').value.trim();const o=$('#pok');o.style.display='block';o.textContent='🎉 شكرًا '+(n||'يا بطلة')+'! تعهدتِ أن تكوني صديقة للجميع.'};
+$('#rb').onclick=()=>{if(!$('#r1').value||!$('#r5').value.trim()){alert('فضلًا أكملي الحقول المطلوبة *');return}$('#rok').style.display='block'};
+const M=["التسامح قوة، وليس ضعفًا.","الكلمة الطيبة صدقة.","احترام الآخرين يبدأ من احترام اختلافهم.","كوني سببًا في سعادة زميلتك.","المحبة تجمعنا والتنمر يفرقنا.","شجاعتك في الإبلاغ تحمي غيرك.","لا تسخري من أحد، فقد تكونين مكانه."];
+let mi=0;const sm=()=>{$('#msg').textContent='❝ '+M[mi++%M.length]+' ❞'};sm();$('#mb').onclick=sm;setInterval(sm,6000);
+</script>
+</body>
+</html>
